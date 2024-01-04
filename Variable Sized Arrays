@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    
+    int num_arrays, num_queries;
+    cin >> num_arrays >> num_queries;
+
+    
+    vector<vector<int>> arrays(num_arrays);
+    for (int i = 0; i < num_arrays; ++i) {
+        int array_size;
+        cin >> array_size;
+        arrays[i].resize(array_size);
+        for (int j = 0; j < array_size; ++j) {
+            cin >> arrays[i][j];
+        }
+    }
+
+    
+    for (int q = 0; q < num_queries; ++q) {
+        int array_index, element_index;
+        cin >> array_index >> element_index;
+        cout << arrays[array_index][element_index] << endl;
+        
+    }
+
+    return 0;
+}
