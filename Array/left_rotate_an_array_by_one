@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+vector<int> rotateArray(vector<int> &arr, int n) {
+
+  // Write your code here.
+
+  vector<int> vec(n);
+
+  for (int i = 0; i < n; i++) {
+
+   
+
+      int j = (i==n-1)?-1:i;
+
+    vec[i] = arr[j + 1];
+
+  }
+
+  return vec;
+
+}
+
+ 
