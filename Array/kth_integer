@@ -1,0 +1,24 @@
+int kthInteger(int N, int K, int X, vector<int>& A) {
+
+    vector<int> filtered_numbers;
+    for (int num : A) {
+        if (num % X != 0) {
+            filtered_numbers.push_back(num);
+        }
+    }
+
+ 
+    if (filtered_numbers.empty()) {
+        return -1;
+    }
+
+
+    sort(filtered_numbers.begin(), filtered_numbers.end());
+
+
+    if (K <= filtered_numbers.size()) {
+        return filtered_numbers[K - 1];
+    } else {
+        return -1;
+    }
+}
